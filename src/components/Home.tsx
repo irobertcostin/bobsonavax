@@ -72,27 +72,20 @@ const Home: React.FC = () => {
     let [data, setData] = useState<Pair>();
     let [launchDate, setLaunchDate] = useState(String);
 
-    let getData = async () => {
-        const data = await api.fetchDexScreener();
-        console.log(data.pair);
-        setData(data.pair)
-        const date = new Date(data.pair.pairCreatedAt)
-
-        setLaunchDate(date.toDateString());
-    }
-
-
-
-
     useEffect(() => {
+        let getData = async () => {
+            const data = await api.fetchDexScreener();
+            console.log(data.pair);
+            setData(data.pair)
+            const date = new Date(data.pair.pairCreatedAt)
+    
+            setLaunchDate(date.toDateString());
+        }
         if (!data) {
             getData()
         }
 
-    }, [])
-
-
-
+    }, [data])
 
     return (
         <div className="w-full pb-60 relative flex flex-col justify-center items-center" >
@@ -110,7 +103,7 @@ const Home: React.FC = () => {
 
             <div className="w-full  mt-10 p-4 cursor-pointer">
 
-                <a href="https://traderjoexyz.com/avalanche/trade?outputCurrency=0xf5f3216E9fed36F8cCf08D310FEc6FBf7f06200f" target="_blank">
+                <a href="https://traderjoexyz.com/avalanche/trade?outputCurrency=0xf5f3216E9fed36F8cCf08D310FEc6FBf7f06200f" target="_blank" rel="noreferrer">
                     <div className="flex items-center justify-center gap-4">
 
                         <img className="h-12 w-12" src={avalanche} alt="" />
@@ -157,13 +150,13 @@ const Home: React.FC = () => {
                     <div className="w-full text-center font-bold mt-5 text-xs md:text-lg lg:text-xl">
                         <p className="text-lg">Ownership address (renounced)</p>
                         <p className="mt-2 ">0x0000000000000000000000000000000000000000</p>
-                        <p className="text-lg mt-2">Check tx <a href="https://snowtrace.io/tx/0x03a4407737f205b56128f7d7ed696665f47e2653d5bf5a14b7322f033e267942?chainId=43114" target="_blank" className="text-amber-600">here</a></p>
+                        <p className="text-lg mt-2">Check tx <a href="https://snowtrace.io/tx/0x03a4407737f205b56128f7d7ed696665f47e2653d5bf5a14b7322f033e267942?chainId=43114" target="_blank" rel="noreferrer" className="text-amber-600">here</a></p>
                     </div>
 
 
                     <div className="w-full text-center font-bold mt-5 text-xs md:text-lg lg:text-xl">
                         <p className="text-lg">Initial liquidity burned</p>
-                        <p className="text-lg mt-2">Check tx <a href="https://snowtrace.io/tx/0x6e4d0b7dc40775ad58b8e421c49cb21605c308f7ba40dcd9b51de703c657e546" target="_blank" className="text-amber-600">here</a></p>
+                        <p className="text-lg mt-2">Check tx <a href="https://snowtrace.io/tx/0x6e4d0b7dc40775ad58b8e421c49cb21605c308f7ba40dcd9b51de703c657e546" target="_blank" rel="noreferrer" className="text-amber-600">here</a></p>
 
                     </div>
 
@@ -196,14 +189,14 @@ const Home: React.FC = () => {
 
 
 
-                    <a href="https://twitter.com/BOBSonAVAX" target="_blank">
+                    <a href="https://twitter.com/BOBSonAVAX" target="_blank" rel="noreferrer">
                         <div className="w-20 h-20 bg-black rounded-sm">
                             <img src={twitter}></img>
                         </div>
                     </a>
 
 
-                    <a href="https://t.me/avax_bobs" target="_blank">
+                    <a href="https://t.me/avax_bobs" target="_blank" rel="noreferrer">
                         <div className="w-20 h-20 bg-black rounded-sm p-2">
                             <img src={tg}></img>
                         </div>
