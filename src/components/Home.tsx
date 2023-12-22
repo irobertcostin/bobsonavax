@@ -215,6 +215,10 @@ const Home: React.FC = () => {
 
                     </p>
 
+                    <p>
+                        admin@bobsonavax.com
+                    </p>
+
                 </div>
             </div>
 
