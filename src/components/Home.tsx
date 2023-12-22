@@ -107,7 +107,7 @@ const Home: React.FC = () => {
 
                         <img className="h-12 w-12" src={avalanche} alt="AVAX Logo" />
 
-                        <p className="text-3xl font-bold">BUY NOW ON</p>
+                        <p className="text-3xl font-bold">BUY ON</p>
 
                         <img className="h-12 w-12" src={tdjoe} alt="Trader Joe Logo" />
 
@@ -142,7 +142,7 @@ const Home: React.FC = () => {
                 <div>
                     <div className="w-full text-center font-bold mt-5 text-xs md:text-lg lg:text-xl">
                         <p className="text-lg">Total Supply</p>
-                        <p className="mt-2 ">808,580,858,085,000,000,000,000,000,000</p>
+                        <p className="mt-2 ">808,580,858,085</p>
                     </div>
 
 
