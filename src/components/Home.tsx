@@ -84,7 +84,7 @@ const Home: React.FC = () => {
             getData()
         }
 
-    }, [data, api])
+    }, [data])
 
     return (
         <div className="w-full pb-60 relative flex flex-col justify-center items-center" >
