@@ -74,7 +74,6 @@ const Home: React.FC = () => {
         let getData = async () => {
             let api = new Api();
             const data = await api.fetchDexScreener();
-            console.log(data.pair);
             setData(data.pair)
             const date = new Date(data.pair.pairCreatedAt)
     
