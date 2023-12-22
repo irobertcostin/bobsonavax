@@ -1,14 +1,10 @@
 import logo from "../components/images/bobs.jpg"
 
-import twitter from "./images/X_logo_2023_(white).png"
-import tg from "./images/tg.png"
+// import twitter from "./images/X_logo_2023_(white).png"
+// import tg from "./images/tg.png"
 
 
 const Navbar: React.FC = () => {
-
-
-
-
 
 
     return (
@@ -24,14 +20,14 @@ const Navbar: React.FC = () => {
                 </div>
             </div> */}
 
-            <a href="https://traderjoexyz.com/avalanche/trade?outputCurrency=0xf5f3216E9fed36F8cCf08D310FEc6FBf7f06200f" target="_blank">
+            <a href="https://traderjoexyz.com/avalanche/trade?outputCurrency=0xf5f3216E9fed36F8cCf08D310FEc6FBf7f06200f" target="_blank" rel="noreferrer">
                 <div className="border-2 ">
                     <button className="bg-black text-white p-3 font-semibold text-sm md:text-lg  ease-out duration-300 hover:-translate-x-2 hover:-translate-y-2">BUY SOME $BOBS</button>
                 </div>
             </a>
 
 
-            <img src={logo} className="absolute cursor-pointer z-50 w-24 h-24 md:h-32 md:w-32 lg:h-48 lg:w-48 rounded-full border-2 border-black -bottom-12 left-10 md:left-24 lg:left-60 lg:-bottom-24 hover:rotate-90 ease-in-out duration-300"></img>
+            <img src={logo} alt="BOBS Logo" className="absolute cursor-pointer z-50 w-24 h-24 md:h-32 md:w-32 lg:h-48 lg:w-48 rounded-full border-2 border-black -bottom-12 left-10 md:left-24 lg:left-60 lg:-bottom-24 hover:rotate-90 ease-in-out duration-300"></img>
 
 
 
