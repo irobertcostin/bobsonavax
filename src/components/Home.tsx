@@ -2,11 +2,94 @@ import twitter from "./images/X_logo_2023_(white).png"
 import tg from "./images/tg.png"
 import avalanche from "./images/avalanche.png"
 import tdjoe from "./images/traderjoe.png"
+import Api from "../service/Api"
+import { useEffect, useState } from "react"
+
+
+
+
+interface Pair {
+    chainId: string;
+    dexId: string;
+    url: string;
+    pairAddress: string;
+    baseToken: {
+        address: string;
+        name: string;
+        symbol: string;
+    };
+    quoteToken: {
+        symbol: string;
+    };
+    priceNative: string;
+    priceUsd?: string;
+    txns: {
+        m5: {
+            buys: number;
+            sells: number;
+        };
+        h1: {
+            buys: number;
+            sells: number;
+        };
+        h6: {
+            buys: number;
+            sells: number;
+        };
+        h24: {
+            buys: number;
+            sells: number;
+        };
+    };
+    volume: {
+        m5: number;
+        h1: number;
+        h6: number;
+        h24: number;
+    };
+    priceChange: {
+        m5: number;
+        h1: number;
+        h6: number;
+        h24: number;
+    };
+    liquidity?: {
+        usd?: number;
+        base: number;
+        quote: number;
+    };
+    fdv?: number;
+    pairCreatedAt?: number;
+}
 
 
 
 
 const Home: React.FC = () => {
+
+    let api = new Api();
+
+    let [data, setData] = useState<Pair>();
+    let [launchDate, setLaunchDate] = useState(String);
+
+    let getData = async () => {
+        const data = await api.fetchDexScreener();
+        console.log(data.pair);
+        setData(data.pair)
+        const date = new Date(data.pair.pairCreatedAt)
+
+        setLaunchDate(date.toDateString());
+    }
+
+
+
+
+    useEffect(() => {
+        if (!data) {
+            getData()
+        }
+
+    }, [])
 
 
 
@@ -85,6 +168,19 @@ const Home: React.FC = () => {
                     </div>
 
 
+                    <div className="w-full flex justify-center items-center my-10">
+                        {
+                            data &&
+                            <div className="w-full flex flex-col">
+                                <div className="w-full font-bold flex flex-col justify-center items-center">
+                                    <p>Launch date: {launchDate}</p>
+                                    <p>MCAP: $ {data.fdv?.toLocaleString()}</p>
+                                    <p>Liquidity: $ {data.liquidity?.usd?.toLocaleString()}</p>
+                                    <p>Volume: $ {data.volume?.h24.toLocaleString()}</p>
+                                </div>
+                            </div>
+                        }
+                    </div>
 
 
 

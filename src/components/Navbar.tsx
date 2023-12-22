@@ -1,14 +1,10 @@
 import logo from "../components/images/bobs.jpg"
-import { useNavigate } from "react-router-dom";
 
 import twitter from "./images/X_logo_2023_(white).png"
 import tg from "./images/tg.png"
 
 
 const Navbar: React.FC = () => {
-
-
-    let navigate = useNavigate();
 
 
 
