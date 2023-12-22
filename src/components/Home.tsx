@@ -85,7 +85,7 @@ const Home: React.FC = () => {
             getData()
         }
 
-    }, [data])
+    }, [data, api])
 
     return (
         <div className="w-full pb-60 relative flex flex-col justify-center items-center" >
@@ -106,11 +106,11 @@ const Home: React.FC = () => {
                 <a href="https://traderjoexyz.com/avalanche/trade?outputCurrency=0xf5f3216E9fed36F8cCf08D310FEc6FBf7f06200f" target="_blank" rel="noreferrer">
                     <div className="flex items-center justify-center gap-4">
 
-                        <img className="h-12 w-12" src={avalanche} alt="" />
+                        <img className="h-12 w-12" src={avalanche} alt="AVAX Logo" />
 
                         <p className="text-3xl font-bold">BUY NOW ON</p>
 
-                        <img className="h-12 w-12" src={tdjoe} alt="" />
+                        <img className="h-12 w-12" src={tdjoe} alt="Trader Joe Logo" />
 
                     </div>
                 </a>
