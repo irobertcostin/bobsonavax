@@ -67,13 +67,12 @@ interface Pair {
 
 const Home: React.FC = () => {
 
-    let api = new Api();
-
     let [data, setData] = useState<Pair>();
     let [launchDate, setLaunchDate] = useState(String);
 
     useEffect(() => {
         let getData = async () => {
+            let api = new Api();
             const data = await api.fetchDexScreener();
             console.log(data.pair);
             setData(data.pair)
@@ -191,14 +190,14 @@ const Home: React.FC = () => {
 
                     <a href="https://twitter.com/BOBSonAVAX" target="_blank" rel="noreferrer">
                         <div className="w-20 h-20 bg-black rounded-sm">
-                            <img src={twitter}></img>
+                            <img src={twitter} alt="Twitter Logo"></img>
                         </div>
                     </a>
 
 
                     <a href="https://t.me/avax_bobs" target="_blank" rel="noreferrer">
                         <div className="w-20 h-20 bg-black rounded-sm p-2">
-                            <img src={tg}></img>
+                            <img src={tg} alt="Telegram Logo"></img>
                         </div>
                     </a>
 
