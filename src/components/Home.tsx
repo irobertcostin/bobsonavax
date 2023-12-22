@@ -110,7 +110,7 @@ const Home: React.FC = () => {
 
             <div className="w-full  mt-10 p-4 cursor-pointer">
 
-                <a href="https://traderjoexyz.com/avalanche/trade" target="_blank">
+                <a href="https://traderjoexyz.com/avalanche/trade?outputCurrency=0xf5f3216E9fed36F8cCf08D310FEc6FBf7f06200f" target="_blank">
                     <div className="flex items-center justify-center gap-4">
 
                         <img className="h-12 w-12" src={avalanche} alt="" />

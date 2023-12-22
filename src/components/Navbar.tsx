@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
                 </div>
             </div> */}
 
-            <a href="https://traderjoexyz.com/avalanche/trade" target="_blank">
+            <a href="https://traderjoexyz.com/avalanche/trade?outputCurrency=0xf5f3216E9fed36F8cCf08D310FEc6FBf7f06200f" target="_blank">
                 <div className="border-2 ">
                     <button className="bg-black text-white p-3 font-semibold text-sm md:text-lg  ease-out duration-300 hover:-translate-x-2 hover:-translate-y-2">BUY SOME $BOBS</button>
                 </div>
