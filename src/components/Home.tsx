@@ -76,7 +76,6 @@ const Home: React.FC = () => {
             const data = await api.fetchDexScreener();
             setData(data.pair)
             const date = new Date(data.pair.pairCreatedAt)
-            console.log(data.pair);
             setLaunchDate(date.toDateString());
         }
         if (!data) {
@@ -95,8 +94,6 @@ const Home: React.FC = () => {
                     sequence={[
                         // Same substring at the start will only be typed out once, initially
                         'Show me your $BOBS',
-                        1000, // wait 1s before replacing "Mice" with "Hamsters"
-                        "Show me your $BOBS you won't need no jobs",
                         1000,
                         'Show me your $BOBS and forget about COQs',
                         1000,
@@ -224,7 +221,7 @@ const Home: React.FC = () => {
 
                     <div className="w-full flex flex-col items-center mt-5 text-xl font-bold md:grid md:grid-cols-4 md:text-center lg:text-2xl">
 
-                        <p>1% Wallet Buy Limit</p>
+                        <p>.8085% Wallet Buy Limit</p>
                         <p>No Team Allocation</p>
                         <p>No Presale</p>
                         <p>No Tax</p>
