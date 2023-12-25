@@ -2,7 +2,8 @@ import logo from "../components/images/bobs.jpg"
 import dexscreener from "./images/dexscreener.jpg"
 import twitter from "./images/X_logo_2023_(white).png"
 import tg from "./images/tg.png"
-import { GithubOutlined } from "@ant-design/icons"
+import { GithubOutlined, BookOutlined } from "@ant-design/icons"
+
 
 
 
@@ -24,7 +25,7 @@ const Footer: React.FC = () => {
 
                     <p className="mb-4 md:text-lg">Follow us on social media</p>
 
-                    <div className="mb-8 flex justify-center gap-10">
+                    <div className="mb-8 flex justify-center gap-6">
                         <a href="https://twitter.com/BOBSonAVAX" target="_blank" rel="noreferrer">
                             <div className="w-10 h-10  bg-black p-1 ">
                                 <img src={twitter} alt="Twitter Logo"></img>
@@ -50,6 +51,15 @@ const Footer: React.FC = () => {
                                 <GithubOutlined className="text-3xl pt-1" />
                             </div>
                         </a>
+
+                        <a href="https://github.com/BOBSonAVAX" target="_blank" rel="noreferrer">
+                            <div className="  bg-black rounded-md flex justify-center items-center">
+
+                                <BookOutlined className="text-3xl py-1" />
+                            </div>
+                        </a>
+
+
                     </div>
 
 
