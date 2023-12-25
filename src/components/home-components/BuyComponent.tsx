@@ -21,7 +21,7 @@ const BuyComponent: React.FC = () => {
 
 
     return (
-        <div className="buycomp relative h-[400px]  md:h-[80vh] lg:h-[50vh]  w-full">
+        <div className="buycomp relative h-[400px] bg-white  md:h-[80vh] lg:h-[50vh]  w-full">
 
 
 
