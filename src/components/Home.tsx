@@ -1,18 +1,11 @@
-import twitter from "./images/X_logo_2023_(white).png"
-import tg from "./images/tg.png"
-import avalanche from "./images/avalanche.png"
-import tdjoe from "./images/traderjoe.png"
+
 import Api from "../service/Api"
 import { useEffect, useState } from "react"
-
-import dexscreener from "./images/dexscreener.jpg"
 import PairDexscreener from "./interfaces/PairInterface"
-
-
 // components
 import TypicalComponent from "./home-components/TypicalComponent"
 import Roadmap from "./home-components/Roadmap"
-import Bobsnomics from "./home-components/Bobsnomics"
+// import Bobsnomics from "./home-components/Bobsnomics"
 import BuyComponent from "./home-components/BuyComponent"
 import Footer from "./Footer"
 import Statistics from "./home-components/Statistics"
@@ -21,15 +14,15 @@ import Statistics from "./home-components/Statistics"
 const Home: React.FC = () => {
 
     let [data, setData] = useState<PairDexscreener>();
-    let [launchDate, setLaunchDate] = useState(String);
+
 
     useEffect(() => {
         let getData = async () => {
             let api = new Api();
             const data = await api.fetchDexScreener();
             setData(data.pair)
-            const date = new Date(data.pair.pairCreatedAt)
-            setLaunchDate(date.toDateString());
+
+
         }
         if (!data) {
             getData()

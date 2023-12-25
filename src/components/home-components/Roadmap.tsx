@@ -1,5 +1,5 @@
 
-import roadmap from "../images/bobsmap.png"
+
 
 
 const Roadmap: React.FC = () => {

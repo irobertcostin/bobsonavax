@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Modal, Space, ConfigProvider } from 'antd';
+import { Modal, ConfigProvider } from 'antd';
 
 
 const BuyComponent: React.FC = () => {
