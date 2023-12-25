@@ -2,6 +2,12 @@ import logo from "../components/images/bobs.jpg"
 import dexscreener from "./images/dexscreener.jpg"
 import twitter from "./images/X_logo_2023_(white).png"
 import tg from "./images/tg.png"
+import { GithubOutlined } from "@ant-design/icons"
+
+
+
+
+
 
 
 const Navbar: React.FC = () => {
@@ -14,7 +20,7 @@ const Navbar: React.FC = () => {
 
 
             <div className="flex w-full items-center justify-end">
-                <div className=" hidden  justify-center items-center md:flex  gap-4 mr-4">
+                <div className=" flex justify-center items-center  gap-4 mr-4">
 
 
                     <a href="https://twitter.com/BOBSonAVAX" target="_blank" rel="noreferrer">
@@ -30,15 +36,21 @@ const Navbar: React.FC = () => {
                         </div>
                     </a>
 
-                    <a href="https://dexscreener.com/avalanche/0x8d59f25a2a31f80d12dda8d6cee125684ea1d019" target="_blank" rel="noreferrer" >
+                    <a className="hidden md:block" href="https://dexscreener.com/avalanche/0x8d59f25a2a31f80d12dda8d6cee125684ea1d019" target="_blank" rel="noreferrer" >
                         <div className="w-10 h-10 rounded-md   bg-black ">
                             <img src={dexscreener} className="rounded-md" alt="Dexscreener Logo"></img>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/BOBSonAVAX" target="_blank" rel="noreferrer">
+                        <div className=" w-10 h-10 bg-black rounded-md flex justify-center items-center">
+                            <GithubOutlined className="text-3xl  text-white" alt="Github logo" />
                         </div>
                     </a>
                 </div>
 
                 <div className=" ">
-                    <button className="bg-black rounded-md  text-white px-3 py-2 hover:bg-slate-800 ease-in-out duration-300">Connect wallet</button>
+                    <button className="bg-black rounded-md  text-white px-3 py-2 hover:bg-slate-800 ease-in-out duration-300">Launch app</button>
                 </div>
             </div>
 
